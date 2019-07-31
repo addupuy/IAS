@@ -108,7 +108,7 @@ timestamp = str(time.clock())
 resultsdir = "gCIS_results_" + timestamp.split(".")[1]
 os.mkdir(mypath +"/"+ resultsdir)
 pipepath = os.path.dirname(os.path.realpath(__file__)) #sets path variable for directory containing pipeline
-genepath = mypath +"/"+ genome +"/"+ geneset
+genepath = pipepath +"/"+ genome +"/"+ geneset
 parameters = open(mypath +"/"+ resultsdir +"/"+ resultsdir + "_parameter_settings.txt","wa")
 parameters.write("input filename: " + myfile +"\npromoter size (bp): " + str(promoter) +"\ngenome: "+genome +"\ngene annotation: " +geneset+"\n")
 parameters.close()
